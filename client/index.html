@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>internet-speed</title>
+    <!-- IE required polyfills, in this exact order -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.33.3/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js"></script>
+    
+    <script src="https://code.angularjs.org/2.0.0-beta.2/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/tools/system.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.2/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.2/angular2.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.2/http.dev.js"></script>
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <!--<script src="./node_modules/rxjs/bundles/Rx.umd.js"></script>
+    <script src="./node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="./node_modules/angular2/bundles/http.dev.js"></script>
+    <script src="./node_modules/d3/d3.js"></script>-->
+    <script>
+      System.config({
+        transpiler: 'typescript', 
+        typescriptOptions: { emitDecoratorMetadata: true }, 
+        packages: {'app': {defaultExtension: 'ts'}} 
+      });
+      System.import('ts/main.ts')
+            .then(null, console.error.bind(console));
+    </script>
+
+    <link rel="stylesheet" href="index.css">
+
+  </head>
+
+  <!-- 3. Display the application -->
+  <body>
+    <internet-speed class="container" style="display: block">Loading...</internet-speed>
+  </body>
+
+</html>
+
+<!-- 
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

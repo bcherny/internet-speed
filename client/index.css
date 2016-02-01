@@ -1,0 +1,21 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+internet-speed,
+times-graph,
+d3-graph {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+rect {}

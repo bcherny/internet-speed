@@ -6,7 +6,7 @@ inspired by https://www.reddit.com/r/technology/comments/43fi39/i_set_up_my_rasp
 
 ## usage
 
-1. create a config.json file in your root directory
+first, create a config.json file in your root directory
 
 eg.
 
@@ -21,7 +21,7 @@ eg.
 }
 ```
 
-2. start the server
+then, start the server
 
 ```sh
 npm start

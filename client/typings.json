@@ -1,0 +1,7 @@
+{
+  "dependencies": {},
+  "devDependencies": {},
+  "ambientDependencies": {
+    "d3": "github:DefinitelyTyped/DefinitelyTyped/d3/d3.d.ts#c09bd959175c3ca80ef4a92bcbac93307f266c12"
+  }
+}

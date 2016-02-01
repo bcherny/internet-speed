@@ -1,18 +1,22 @@
 import { testSpeed } from './tester'
 import { start } from './server'
-import { connect, disconnect } from './store'
+// import { connect, disconnect } from './store'
 
-connect()
+start()
 
   // start server
-  .then(start, err => console.error('error connecting to mongo', err))
+  .catch(err => console.error('error connecting to mongo', err))
   .then(() => console.info('started server'))
 
-  // initial poll
-  .then(testSpeed)
+  // init poll
+  .then(poll)
 
-  // poll every 1 min
-  .then(() => setTimeout(testSpeed, 60*1000))
+// poll every 1 min
+function poll () {
+  testSpeed()
+    .then(() => console.info('got results!'))
+    .then(() => setTimeout(poll, 10*1000))
+}
 
 
-process.on('exit', disconnect)
+// process.on('exit', disconnect)

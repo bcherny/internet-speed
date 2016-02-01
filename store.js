@@ -14,7 +14,8 @@ const TestRun = mongoose.model('TestRun', new mongoose.Schema({
   server_lat: 'number',
   server_lng: 'number',
   server_id: 'number',
-  server_ping: 'number'
+  server_ping: 'number',
+  time: 'string'
 }))
 
 export function connect () {
